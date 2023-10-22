@@ -34,8 +34,21 @@ abstract class House {
   abstract openDoor(key: Key): void;
 
   comeIn(person: Person) {
-    this.tenants.push(person);
+    
+    if (this.door ) {
+      this.tenants.push(person);
+     
+    } else {
+      console.log(`Двері зачинені.`);
+    }
   }
+
+  }
+
+
+
+
+
 }
 
 class MyHouse extends House {
