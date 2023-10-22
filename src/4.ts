@@ -34,13 +34,7 @@ abstract class House {
   abstract openDoor(key: Key): void;
 
   comeIn(person: Person) {
-    if (
-      this.door &&
-      this.key.getSignature() === person.getKey().getSignature()
-    ) {
-      this.tenants.push(person);
-    } else {
-    }
+    this.tenants.push(person);
   }
 }
 
